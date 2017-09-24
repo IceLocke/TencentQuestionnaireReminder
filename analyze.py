@@ -4,7 +4,8 @@ from selenium import webdriver
 import time
 
 headers = {"User-Agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36"}
-main_url = "https://wj.qq.com/stat_recycle.html?id=1491015"
+#你的问卷地址
+main_url = "https://wj.qq.com/stat_recycle.html?id="
 driver = webdriver.Safari()
 driver.set_page_load_timeout(10)
 
