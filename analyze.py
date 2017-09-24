@@ -43,7 +43,8 @@ def getNo():
 
 
 def ana(ID):
-    url = "https://wj.qq.com/stat_recycle_answer.html?id=1491015#p1&" + ID
+    #你的问卷地址
+    url = "https://wj.qq.com/stat_recycle_answer.html?id=#p1&" + ID
     driver.get(url)
 
     return driver.page_source
