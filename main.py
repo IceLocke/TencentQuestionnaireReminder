@@ -1,8 +1,8 @@
 #主程序
 
 import time
-from TencentQuestionnaireReminder import analyze as funcs
-from TencentQuestionnaireReminder import sendmail as mail
+import analyze as funcs
+import sendmail as mail
 
 last_no = "0"
 
