@@ -29,13 +29,18 @@ def login():
     cookies = driver.get_cookies()
     for eachcookie in cookies:
         driver.add_cookie(eachcookie)
-    time.sleep(2)
 
-    print("[Log]Login successfully!")
+    driver.refresh()
 
+    #进入收集界面
+    questionImg = driver.find_element_by_xpath('//*[@id="survey_1491015"]/div[1]/img')
+    questionImg.click()
+    time.sleep(0.2)
+    questionBtn = driver.find_element_by_xpath('//*[@id="survey_detail"]/div[2]/div/div[8]/a[1]')
+    questionBtn.click()
 
 def getNo():
-    driver.get(main_url)
+    driver.refresh()
     time.sleep(2)
     no = driver.find_element_by_xpath('//*[@id="list"]/tr[1]/td[3]')
     print("The latest questionnaire number is: ", no)
